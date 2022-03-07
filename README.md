@@ -5,6 +5,8 @@
 - [2. Frontend](#2-frontend)
   - [2.1. Ionic](#21-ionic)
   - [2.2. Desarrollo de Ionic en Android](#22-desarrollo-de-ionic-en-android)
+  - [2.3. Instalación del plugin `@capacitor/push-notifications`](#23-instalación-del-plugin-capacitorpush-notifications)
+  - [2.4. Crear proyecto en Firebase Cloud Messaging (FCM)](#24-crear-proyecto-en-firebase-cloud-messaging-fcm)
 
 ## 1. Backend
 
@@ -52,3 +54,16 @@ Si se quiere abrir el proyecto en Android Studio, se puede hacer por consola con
 ```powershell
 ionic capacitor open android
 ```
+
+### 2.3. Instalación del plugin `@capacitor/push-notifications`
+
+He seguido los pasos de la [web](https://capacitorjs.com/docs/apis/push-notifications).
+
+```powershell
+npm install @capacitor/push-notifications
+npx cap sync
+```
+
+### 2.4. Crear proyecto en Firebase Cloud Messaging (FCM)
+
+Para mandar las notificaciones en la API se usa Firebase Cloud Messaging de Google. Mirar las [instrucciones](https://firebase.google.com/docs/cloud-messaging/android/client) para crear un proyecto.
