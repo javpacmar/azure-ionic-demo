@@ -7,6 +7,7 @@
   - [2.2. Desarrollo de Ionic en Android](#22-desarrollo-de-ionic-en-android)
   - [2.3. Instalación del plugin `@capacitor/push-notifications`](#23-instalación-del-plugin-capacitorpush-notifications)
   - [2.4. Crear proyecto en Firebase Cloud Messaging (FCM)](#24-crear-proyecto-en-firebase-cloud-messaging-fcm)
+  - [2.5. Uso del plugin push-notifications de Capacitor](#25-uso-del-plugin-push-notifications-de-capacitor)
 
 ## 1. Backend
 
@@ -35,6 +36,8 @@ Paso 2: Crear el proyecto Ionic
 
 ```powershell
 ionic start
+cd ./project
+npx cap init # Esto permite cambiar el nombre de la app y su id
 ```
 
 ### 2.2. Desarrollo de Ionic en Android
@@ -67,3 +70,13 @@ npx cap sync
 ### 2.4. Crear proyecto en Firebase Cloud Messaging (FCM)
 
 Para mandar las notificaciones en la API se usa Firebase Cloud Messaging de Google. Mirar las [instrucciones](https://firebase.google.com/docs/cloud-messaging/android/client) para crear un proyecto.
+
+Agregar esta línea en las dependencias de gradle:
+
+```java
+implementation 'com.google.firebase:firebase-iid'
+```
+
+### 2.5. Uso del plugin push-notifications de Capacitor
+
+Ejemplo que nos da la página [web de Capacitor](https://capacitorjs.com/docs/guides/push-notifications-firebase).
