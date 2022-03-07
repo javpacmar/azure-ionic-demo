@@ -40,3 +40,15 @@ ionic start
 Para la creación de la app en Android he seguido el [tutorial](https://ionicframework.com/docs/developing/android).
 
 Si a la hora de hacer build de la aplicación en Android Studio da fallo, usar en terminal `ionic capacitor sync android` y volver a buildear.
+
+Cada vez que se quiera actualizar la aplicación de Android se debe ejecutar:
+
+```powershell
+ionic capacitor copy android
+```
+
+Si se quiere abrir el proyecto en Android Studio, se puede hacer por consola con:
+
+```powershell
+ionic capacitor open android
+```
