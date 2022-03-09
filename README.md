@@ -80,3 +80,5 @@ implementation 'com.google.firebase:firebase-iid'
 ### 2.5. Uso del plugin push-notifications de Capacitor
 
 Ejemplo que nos da la página [web de Capacitor](https://capacitorjs.com/docs/guides/push-notifications-firebase).
+
+Para mejorar el aspecto de las alertas dentro de la app, se puede utilizar el componente [Alert de Ionic](https://ionicframework.com/docs/api/alert).
