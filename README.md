@@ -2,6 +2,7 @@
 
 - [1. Backend](#1-backend)
   - [1.1. NestJS](#11-nestjs)
+  - [1.2. Azure Notification Hub](#12-azure-notification-hub)
 - [2. Frontend](#2-frontend)
   - [2.1. Ionic](#21-ionic)
   - [2.2. Desarrollo de Ionic en Android](#22-desarrollo-de-ionic-en-android)
@@ -21,6 +22,22 @@ nest new project-name
 ```
 
 Paso 2: Crear un nuevo endpoint para la notificación
+
+### 1.2. Azure Notification Hub
+
+Cronológicamente esta sección la hice al final pero la añado en esta sección ya que tiene que ver con el backend.
+
+Como se dice en este [enlace](https://docs.microsoft.com/es-es/azure/notification-hubs/android-sdk), he linkeado la API de Firebase con la de Azure y he añadido algunas dependencias dentro de la aplicación frontend. Ahora se tendrá que instalar las dependencias dentro del backend, siguiendo estas [instrucciones](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/notificationhubs/arm-notificationhubs). Con ello usamos estos comandos:
+
+```powershell
+npm install @azure/arm-notificationhubs
+```
+
+Para ver el connectionStringName se debe ir al Azure portal y mirar dentro del recurso en la sección "directivas de acceso".
+
+[Link de interes](https://docs.microsoft.com/es-es/azure/notification-hubs/notification-hubs-nodejs-push-notification-tutorial).
+
+IMPORTANTE: actualmente el SDK de Notification Hubs solo sirve para su mantenimiento, es decir, permite crear o eliminar diferentes espacios de nombre entre otras cosas pero no permite enviar notificaciones o recibirlas. La única version disponible para su uso es [azure-sb](https://www.npmjs.com/package/azure-sb). <https://github.com/Azure/azure-sdk-for-js/issues/13841>
 
 ## 2. Frontend
 
